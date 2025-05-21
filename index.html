@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoInfo Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      /* Ensure the map container has a defined size */
+      .map-container {
+        width: 100%;
+        height: 100%; /* Will be controlled by aspect ratio or parent height */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.0"
+  }
+}
+</script>
+    <!-- 
+      IMPORTANT: Replace YOUR_GOOGLE_MAPS_API_KEY with your actual Google Maps JavaScript API key.
+      You can obtain a key from the Google Cloud Console: https://console.cloud.google.com/google/maps-apis/overview
+      Ensure the "Maps JavaScript API" is enabled for your key.
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvY6S190e1QGg685i1YZs-ToxFvDckSAM&libraries=marker"></script>
+  </head>
+  <body class="bg-slate-900 text-slate-100">
+    <noscript>You need to enable JavaScript to run this app. And a Google Maps API Key in index.html</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
